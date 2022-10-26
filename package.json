@@ -1,0 +1,11 @@
+{
+  "name": "Ubunto-Linuz",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/snaporteur/Ubunto-Linuz.git",
+  "author": "snaporteur",
+  "license": "MIT"
+}

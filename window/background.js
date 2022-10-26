@@ -13,12 +13,18 @@ module.exports = {
             maximizable: false,
             resizable: false,
             webPreferences: {
-                devTools: false,
                 preload: path.join(__dirname, "preload/background.js")
             }
         })
+        window.webContents.openDevTools(true);
         window.removeMenu();
         window.setSkipTaskbar(true);
-        window.loadFile("html/background.html");
+        window.loadFile("browser/html/background.html");
+        
+        if(JSON.parse(require("fs").readFileSync(path.join(__dirname, "../config.json"), "utf-8")).background.image == "default") {
+            window.webContents.send("set-background-src", "../../data/background/default.jpg")
+        } else {
+            window.webContents.send("set-background-src", JSON.parse(require("fs").readFileSync(path.join(__dirname, "../config.json"), "utf-8")).background.image)
+        }
     }
 };
