@@ -1,11 +1,22 @@
 {
-  "name": "Ubunto-Linuz",
+  "name": "ubunto-linuz",
   "version": "0.0.1",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/snaporteur/Ubunto-Linuz.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snaporteur/Ubunto-Linuz.git"
+  },
   "author": "snaporteur",
-  "license": "MIT"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snaporteur/Ubunto-Linuz/issues"
+  },
+  "homepage": "https://github.com/snaporteur/Ubunto-Linuz#readme",
+  "dependencies": {
+    "electron": "^21.2.0"
+  }
 }
