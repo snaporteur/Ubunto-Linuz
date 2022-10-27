@@ -1,5 +1,11 @@
 {
     "background": {
         "image": "default"
+    },
+    "taskbar": {
+        "height": 50,
+        "x": 0,
+        "y": 0,
+        "color": "#323537"
     }
 }

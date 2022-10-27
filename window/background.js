@@ -16,9 +16,7 @@ module.exports = {
                 preload: path.join(__dirname, "preload/background.js")
             }
         })
-        window.webContents.openDevTools(true);
         window.removeMenu();
-        window.setSkipTaskbar(true);
         window.loadFile("browser/html/background.html");
         
         if(JSON.parse(require("fs").readFileSync(path.join(__dirname, "../config.json"), "utf-8")).background.image == "default") {
