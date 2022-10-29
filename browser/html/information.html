@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <span><img src=""><h3></h3></span>
+    <p></p>
+    <script>
+        function getParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+        if(getParameterByName("type") == "about") {
+            document.querySelector("img").src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAX5JREFUSEu1lP0xA2EQh59UgAroABWgAlSADqiADugAFaCCUAE6oAMqYJ7M7s3lzV3uTWZu/8lcbm9/H/sxYeSYjFyfIYAd4Bg4BPYAn40v4AN4BV7iuZNrH8AmcAucVyp8AK6AnzK/C0CmU0AQ4xF4DrZZwHeqOgHOIs93R6GswSkB/MjihtJVsMCqYCmYCrTS3NMgM0trA5j4Hj7LutaexBNENfZnP4m1AS7D97eQX2n/XJpNP4h+3JUK8qUS9XydsCdPQEOyreAvKg6N7hDwXJ12MRu0AWxVNHYZSC/A6BbdANcxYs7zOrG0yY6p678dc32xIkKO6Xecldn+lA11i2VhL5wk19+5XhbeJ8+KE/QbIy7RhUXL/9xmiwtiyKxUY9HdKJoLuVC8S0GCaJeLkndGpaq7j99SkZvvolYdu/bHOXIq0IY8gPqc51q1vTYOLVUCJGgv074m1QLorxbYj5WiBuAzLmszGasgDAHIuLN5tSBDALV1evNGB/gHXQJUGcgd5D8AAAAASUVORK5CYII="
+        }
+        document.querySelector("h3").innerText = getParameterByName("title")
+        document.querySelector("p").innerText = getParameterByName("p")
+    </script>
+</body>
+</html>

@@ -12,6 +12,7 @@ module.exports = {
             minimizable: false,
             maximizable: false,
             resizable: false,
+            title: "Desktop",
             webPreferences: {
                 preload: path.join(__dirname, "preload/background.js")
             }

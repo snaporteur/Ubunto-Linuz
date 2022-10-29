@@ -1,0 +1,13 @@
+body {
+    overflow-y: hidden;
+}
+#menu {
+    display: flex;
+    padding: 0px;
+}
+#menu li {
+    list-style-type: none;
+}
+#menu button {
+    margin-right: 5px;
+}

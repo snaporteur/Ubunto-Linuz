@@ -1,8 +1,8 @@
 const { app } = require('electron');
 
 app.whenReady().then(() => {
-  require("./window/background").window()
   require("./window/taskbar").window()
+  require("./window/applist").init()
 
   app.on('activate', () => {
     
