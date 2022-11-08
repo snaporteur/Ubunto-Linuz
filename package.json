@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/snaporteur/Ubunto-Linuz#readme",
   "dependencies": {
-    "electron": "^6.1.12"
+    "electron": "^15.5.5"
   }
 }
